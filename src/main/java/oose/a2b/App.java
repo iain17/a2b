@@ -37,8 +37,4 @@ public class App
 
     }
 
-    public void voorbeeldPopulatie() {
-
-    }
-
 }

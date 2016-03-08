@@ -10,6 +10,10 @@ public class Systeem {
 
 	private Verkeersmelding[] verkeersmelding;
 
+	public void Systeem() {
+		//Database vullen voor Robin
+	}
+
 	/**
 	 *  
 	 */
