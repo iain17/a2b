@@ -14,9 +14,11 @@ public class Verkeersmelding {
 
 	private Verbindingsstuk locatie;
 
-	private VerkeersInformatie verkeersInformatie;
+	private Verkeersinformatie verkeersinformatie;
 
 	private Verbindingsstuk verbindingsstuk;
+
+	private Systeem systeem;
 
 	public boolean verwijderen() {
 		return false;

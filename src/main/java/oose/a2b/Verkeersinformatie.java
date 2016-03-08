@@ -1,6 +1,8 @@
 package oose.a2b;
 
-public abstract class VerkeersInformatie extends Verbindingsstuk {
+public abstract class Verkeersinformatie extends Verbindingsstuk {
+
+	private Systeem systeem;
 
 	private File file;
 

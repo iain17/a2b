@@ -4,19 +4,21 @@ import java.util.ArrayList;
 
 public class Route {
 
-	private int routeNr;
+	private int routenummer;
 
-	private String beginPunt;
+	private String beginpunt;
 
-	private String eindPunt;
+	private String eindpunt;
 
 	private float km;
 
 	private float reistijd;
 
+	private Systeem systeem;
+
 	private Verbindingsstuk[] verbindingsstuk;
 
-	public ArrayList getVerbindsstukken() {
+	public ArrayList<Verbindingsstuk> getVerbindingsstukken() {
 		return null;
 	}
 

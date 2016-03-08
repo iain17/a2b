@@ -1,12 +1,12 @@
 package oose.a2b;
 
-public class Flitspaal extends VerkeersInformatie {
+public class Flitspaal extends Verkeersinformatie {
 
-	private float hectorMeterPaal;
+	private float hectometerpaal;
 
-	private VerkeersInformatie verkeersInformatie;
+	private Verkeersinformatie verkeersinformatie;
 
-	public boolean wijzigen(float hectorMeterPaal) {
+	public boolean wijzigen(float hectometerpaal) {
 		return false;
 	}
 

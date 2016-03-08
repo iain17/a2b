@@ -1,12 +1,10 @@
+package oose.a2b;
+
 import java.util.ArrayList;
 
-public class A2BSysteem {
+public class Systeem {
 
-	private A2BApp[] a2BApp;
-
-	private VerkeersInformatie[] verkeersInformatie;
-
-	private Route route;
+	private Verkeersinformatie[] verkeersinformatie;
 
 	private Route[] route;
 
@@ -15,14 +13,14 @@ public class A2BSysteem {
 	/**
 	 *  
 	 */
-	public ArrayList getRoutes(String BeginPunt, String EindPunt) {
+	public ArrayList<Route> getRoutes(String beginpunt, String eindpunt) {
 		return null;
 	}
 
 	/**
 	 *  
 	 */
-	public Route kiesRoute(int routeNr) {
+	public Route kiesRoute(int routenummer) {
 		return null;
 	}
 
@@ -33,11 +31,11 @@ public class A2BSysteem {
 		return false;
 	}
 
-	public ArrayList verkeersInformatieBekijken(Verbindingsstuk verbindingsStuk) {
+	public ArrayList verkeersinformatieBekijken(Verbindingsstuk verbindingsstuk) {
 		return null;
 	}
 
-	public boolean verkeersInformatieToevoegen(VerkeersInformatie verkeersInformatie) {
+	public boolean verkeersinformatieToevoegen(Verkeersinformatie verkeersinformatie) {
 		return false;
 	}
 

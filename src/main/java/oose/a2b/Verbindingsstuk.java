@@ -6,13 +6,13 @@ public class Verbindingsstuk {
 
 	private String naam;
 
-	private Route[] route;
+	private Verkeersinformatie[] verkeersinformatie;
 
-	private VerkeersInformatie[] verkeersInformatie;
+	private Route[] route;
 
 	private Verkeersmelding[] verkeersmelding;
 
-	public ArrayList getVerkeersinformatie() {
+	public ArrayList<Verkeersinformatie> getVerkeersinformatie() {
 		return null;
 	}
 

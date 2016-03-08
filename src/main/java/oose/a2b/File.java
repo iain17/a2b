@@ -1,16 +1,16 @@
 package oose.a2b;
 
-public class File extends VerkeersInformatie {
+public class File extends Verkeersinformatie {
 
 	private float lengteKM;
 
-	private float beginPuntKM;
+	private float beginpuntKM;
 
-	private float eindPuntKM;
+	private float eindpuntKM;
 
-	private VerkeersInformatie verkeersInformatie;
+	private Verkeersinformatie verkeersinformatie;
 
-	public boolean wijzigen(float lengteKM, float beginPuntKM, float eindPuntKM) {
+	public boolean wijzigen(float lengteKM, float beginpuntKM, float eindpuntKM) {
 		return false;
 	}
 
