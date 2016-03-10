@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class App {
     public static void main(String[] args) {
         //Use case: Ophalen verkeersinformatie
-        Systeem systeem = new Systeem();
         Automobilist automobilist = new Automobilist();
 
         Route route = automobilist.getRoute();

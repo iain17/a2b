@@ -10,6 +10,7 @@ public class Verbindingsstuk {
     private Locatie locatie2;
     private float km;
     private ArrayList<Verkeersinformatie> verkeersinformaties = new ArrayList<Verkeersinformatie>();
+    private ArrayList<Verkeersmelding> verkeersmeldingen = new ArrayList<Verkeersmelding>();
 
     public Verbindingsstuk(Locatie locatie1, Locatie locatie2, float gemiddeldeReistijd, float km) {
         this.locatie1 = locatie1;
@@ -25,6 +26,10 @@ public class Verbindingsstuk {
 
     public boolean addVerkeersinformatie(Verkeersinformatie verkeersinformatie) {
         return verkeersinformaties.add(verkeersinformatie);
+    }
+
+    public boolean removeVerkeersinformatie(Verkeersinformatie verkeersinformatie) {
+        return verkeersinformaties.remove(verkeersinformatie);
     }
 
     public float getKM() {
@@ -46,4 +51,11 @@ public class Verbindingsstuk {
         return String.format("Van %s tot %s", locatie1.getNaam(), locatie2.getNaam());
     }
 
+    public void addMelding(Verkeersmelding verkeersmelding) {
+        verkeersmeldingen.add(verkeersmelding);
+    }
+
+    public boolean removeVerkeersMelding(Verkeersmelding verkeersmelding) {
+        return verkeersmeldingen.remove(verkeersmelding);
+    }
 }

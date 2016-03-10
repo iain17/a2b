@@ -17,9 +17,4 @@ public class Radarcontrole extends Verkeersinformatie {
     public String beschrijving() {
         return null;
     }
-
-    @Override
-    public boolean verwijderen() {
-        return false;
-    }
 }

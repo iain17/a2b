@@ -4,7 +4,8 @@ public class Flitspaal extends Verkeersinformatie {
     private float hectometerpaal;
     private Verkeersinformatie verkeersinformatie;
 
-    public Flitspaal(float hectometerpaal, Verkeersinformatie verkeersinformatie) {
+    public Flitspaal(float hectometerpaal, Verbindingsstuk verbindingsstuk) {
+        super(verbindingsstuk);
         this.hectometerpaal = hectometerpaal;
         this.verkeersinformatie = verkeersinformatie;
     }
@@ -18,8 +19,4 @@ public class Flitspaal extends Verkeersinformatie {
         return null;
     }
 
-    @Override
-    public boolean verwijderen() {
-        return false;
-    }
 }

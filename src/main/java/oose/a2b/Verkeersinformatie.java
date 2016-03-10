@@ -4,8 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Verkeersinformatie {
+
+
+    protected Verbindingsstuk verbindingsstuk;
+
+    public Verkeersinformatie(Verbindingsstuk verbindingsstuk) {
+        this.verbindingsstuk = verbindingsstuk;
+    }
+
     public abstract String beschrijving();
-    public abstract boolean verwijderen();
+
+    public boolean verwijderen() {
+        return this.verbindingsstuk.removeVerkeersinformatie(this);
+    }
+
     public float getMinuten() {
         return 0;
     }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Systeem {
     private ArrayList<Route> routes = new ArrayList<Route>();
-    private ArrayList<Verkeersmelding> verkeersmelding = new ArrayList<Verkeersmelding>();
+    private ArrayList<Verbindingsstuk> Verbindingsstukken = new ArrayList<Verbindingsstuk>();
 
     public Systeem() {
         ArrayList<Verbindingsstuk> route1 = new ArrayList<Verbindingsstuk>();
@@ -16,9 +16,14 @@ public class Systeem {
         Locatie Ressen = new Locatie("Ressen");
 
         Verbindingsstuk nijmegenRessen = new Verbindingsstuk(Nijmegen, Ressen, 15.0f, 10.7f);
+        Verbindingsstukken.add(nijmegenRessen);
         Verbindingsstuk nijmegenWaalbrug = new Verbindingsstuk(Nijmegen, Waalbrug, 10, 13.7f);
+        Verbindingsstukken.add(nijmegenWaalbrug);
         Verbindingsstuk RessenArnhem = new Verbindingsstuk(Ressen, Arnhem, 20.0f, 15.7f);
+        Verbindingsstukken.add(RessenArnhem);
         Verbindingsstuk WaalbrugArnhem = new Verbindingsstuk(Waalbrug, Arnhem, 10.0f, 9.7f);
+        Verbindingsstukken.add(WaalbrugArnhem);
+
         route1.add(nijmegenRessen);
         route1.add(RessenArnhem);
 
@@ -26,8 +31,8 @@ public class Systeem {
         route2.add(WaalbrugArnhem);
 
         //Geregisteerde gebruiker heeft een melding gegeven.
-        verkeersmelding.add(new Verkeersmelding("File op de A13 tussen Nijmegen en Ressen", "Robin", nijmegenRessen));
-        verkeersmelding.add(new Verkeersmelding("File op de A4 tussen Ressen en Arnhem", "Iain", RessenArnhem));
+        melden(new Automobilist(), "File op de A13 tussen Nijmegen en Ressen", nijmegenRessen);
+        melden(new Automobilist(), "File op de A4 tussen Ressen en Arnhem", RessenArnhem);
 
         //File die al bestaat
         RessenArnhem.addVerkeersinformatie(new File(5, 6, 10));
@@ -49,8 +54,9 @@ public class Systeem {
         return mogelijkeRoutes;
     }
 
-    public boolean melden(Verkeersmelding verkeersMelden) {
-        return false;
+    public boolean melden(Automobilist automobilist, String beschrijving, Verbindingsstuk verbindingsstuk) {
+        Verkeersmelding verkeersmelding = new Verkeersmelding(beschrijving, automobilist, verbindingsstuk);
+        return true;
     }
 
     public ArrayList verkeersinformatieBekijken(Verbindingsstuk verbindingsstuk) {

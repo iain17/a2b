@@ -21,11 +21,6 @@ public class File extends Verkeersinformatie {
     }
 
     @Override
-    public boolean verwijderen() {
-        return false;
-    }
-
-    @Override
     public float getMinuten() {
         return minuten;
     }
