@@ -10,6 +10,7 @@ public abstract class Verkeersinformatie {
 
     public Verkeersinformatie(Verbindingsstuk verbindingsstuk) {
         this.verbindingsstuk = verbindingsstuk;
+        verbindingsstuk.addVerkeersinformatie(this);
     }
 
     public abstract String beschrijving();

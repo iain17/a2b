@@ -2,19 +2,19 @@ package oose.a2b;
 
 public class Radarcontrole extends Verkeersinformatie {
     private float hectometerpaal;
-    private Verkeersinformatie verkeersinformatie;
 
-    public Radarcontrole(float hectometerpaal, Verkeersinformatie verkeersinformatie) {
+    public Radarcontrole(float hectometerpaal, Verbindingsstuk verbindingsstuk) {
+        super(verbindingsstuk);
         this.hectometerpaal = hectometerpaal;
-        this.verkeersinformatie = verkeersinformatie;
     }
 
     public boolean wijzigen(float hectometerpaal) {
-        return false;
+        this.hectometerpaal = hectometerpaal;
+        return true;
     }
 
     @Override
     public String beschrijving() {
-        return null;
+        return String.format("Een radarcontrole bij hectometerpaal: %.1f", hectometerpaal);
     }
 }

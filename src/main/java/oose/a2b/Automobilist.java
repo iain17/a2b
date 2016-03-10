@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Automobilist {
     private String beginpunt;
     private String eindpunt;
-    private Systeem systeem = new Systeem();
+    private Systeem systeem = new Systeem(this);
     private Route route;
 
     public Automobilist() {

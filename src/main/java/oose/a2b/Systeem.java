@@ -5,8 +5,10 @@ import java.util.ArrayList;
 public class Systeem {
     private ArrayList<Route> routes = new ArrayList<Route>();
     private ArrayList<Verbindingsstuk> Verbindingsstukken = new ArrayList<Verbindingsstuk>();
+    private Automobilist automobilist;
 
-    public Systeem() {
+    public Systeem(Automobilist automobilist) {
+        this.automobilist = automobilist;
         ArrayList<Verbindingsstuk> route1 = new ArrayList<Verbindingsstuk>();
         ArrayList<Verbindingsstuk> route2 = new ArrayList<Verbindingsstuk>();
 
@@ -31,12 +33,12 @@ public class Systeem {
         route2.add(WaalbrugArnhem);
 
         //Geregisteerde gebruiker heeft een melding gegeven.
-        melden(new Automobilist(), "File op de A13 tussen Nijmegen en Ressen", nijmegenRessen);
-        melden(new Automobilist(), "File op de A4 tussen Ressen en Arnhem", RessenArnhem);
+        melden("File op de A13 tussen Nijmegen en Ressen", nijmegenRessen);
+        melden("File op de A4 tussen Ressen en Arnhem", RessenArnhem);
 
         //File die al bestaat
-        RessenArnhem.addVerkeersinformatie(new File(5, 6, 10));
-        RessenArnhem.addVerkeersinformatie(new Belemmering("Weg afgesloten", "2016-03-11", "2016-04-11"));
+        new File(5, 6, 10, nijmegenRessen);
+        new Belemmering("Weg afgesloten", "2016-03-11", "2016-04-11", nijmegenRessen);
 
         routes.add(new Route(Nijmegen, Arnhem, this, route1));
         routes.add(new Route(Nijmegen, Arnhem, this, route2));
@@ -54,8 +56,8 @@ public class Systeem {
         return mogelijkeRoutes;
     }
 
-    public boolean melden(Automobilist automobilist, String beschrijving, Verbindingsstuk verbindingsstuk) {
-        Verkeersmelding verkeersmelding = new Verkeersmelding(beschrijving, automobilist, verbindingsstuk);
+    public boolean melden(String beschrijving, Verbindingsstuk verbindingsstuk) {
+        Verkeersmelding verkeersmelding = new Verkeersmelding(beschrijving, this.automobilist, verbindingsstuk);
         return true;
     }
 

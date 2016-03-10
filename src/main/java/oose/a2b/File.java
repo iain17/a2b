@@ -5,14 +5,18 @@ public class File extends Verkeersinformatie {
     private float hectometerpaalEind;
     private float minuten;
 
-    public File(float hectometerpaalBegin, float hectometerpaalEind, float minuten) {
+    public File(float hectometerpaalBegin, float hectometerpaalEind, float minuten, Verbindingsstuk verbindingsstuk) {
+        super(verbindingsstuk);
         this.hectometerpaalBegin = hectometerpaalBegin;
         this.hectometerpaalEind = hectometerpaalEind;
         this.minuten = minuten;
     }
 
-    public boolean wijzigen(float lengteKM, float beginpuntKM, float eindpuntKM) {
-        return false;
+    public boolean wijzigen(float hectometerpaalBegin, float hectometerpaalEind, float minuten) {
+        this.hectometerpaalBegin = hectometerpaalBegin;
+        this.hectometerpaalEind = hectometerpaalEind;
+        this.minuten = minuten;
+        return true;
     }
 
     @Override
