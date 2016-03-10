@@ -1,23 +1,24 @@
 package oose.a2b;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Verkeersinformatie extends Verbindingsstuk {
+    private Systeem systeem;
 
-	private Systeem systeem;
+    private File file;
 
-	private File file;
+    private Flitspaal flitspaal;
 
-	private Flitspaal flitspaal;
+    private Belemmering belemmering;
 
-	private Belemmering belemmering;
+    private Radarcontrole radarcontrole;
 
-	private Radarcontrole radarcontrole;
+    private List<Verbindingsstuk> verbindingsstuk = new ArrayList<Verbindingsstuk>();
 
-	private Verbindingsstuk[] verbindingsstuk;
+    private Verkeersmelding verkeersmelding;
 
-	private Verkeersmelding verkeersmelding;
+    public abstract String beschrijving();
 
-	public abstract String beschrijving();
-
-	public abstract boolean verwijderen();
-
+    public abstract boolean verwijderen();
 }

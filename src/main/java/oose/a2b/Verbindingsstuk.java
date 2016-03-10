@@ -1,19 +1,18 @@
 package oose.a2b;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Verbindingsstuk {
+    private String naam;
 
-	private String naam;
+    private List<Verkeersinformatie> verkeersinformatie = new ArrayList<Verkeersinformatie>();
 
-	private Verkeersinformatie[] verkeersinformatie;
+    private List<Route> route = new ArrayList<Route>();
 
-	private Route[] route;
+    private List<Verkeersmelding> verkeersmelding = new ArrayList<Verkeersmelding>();
 
-	private Verkeersmelding[] verkeersmelding;
-
-	public ArrayList<Verkeersinformatie> getVerkeersinformatie() {
-		return null;
-	}
-
+    public List<Verkeersinformatie> getVerkeersinformatie() {
+        return verkeersinformatie;
+    }
 }

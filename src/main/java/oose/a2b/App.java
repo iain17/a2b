@@ -1,40 +1,27 @@
 package oose.a2b;
 
-import java.util.ArrayList;
+import java.util.List;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
+public class App {
+    public static void main(String[] args) {
         //USECASE: Ophalen verkeersinformatie
         Systeem systeem = new Systeem();
 
-        ArrayList<Route> mogelijkeRoutes = systeem.getRoutes("Nijmegen", "Arnhem");
+        List<Route> mogelijkeRoutes = systeem.getRoutes("Nijmegen", "Arnhem");
 
-        for(int i = 0; i < mogelijkeRoutes.size(); i++) {
+        for (int i = 0; i < mogelijkeRoutes.size(); i++) {
             Route route = mogelijkeRoutes.get(i);
-            ArrayList<Verbindingsstuk> verbindingsstukken = route.getVerbindingsstukken();
+            List<Verbindingsstuk> verbindingsstukken = route.getVerbindingsstukken();
 
-            for(int ii = 0; ii < verbindingsstukken.size(); ii++) {
+            for (int ii = 0; ii < verbindingsstukken.size(); ii++) {
                 Verbindingsstuk verbindingsstuk = verbindingsstukken.get(ii);
+                List<Verkeersinformatie> verkeersinformaties = verbindingsstuk.getVerkeersinformatie();
 
-                ArrayList<Verkeersinformatie> verkeersinformaties = verbindingsstuk.getVerkeersinformatie();
-                for(int iii = 0; iii < verkeersinformaties.size(); iii++) {
+                for (int iii = 0; iii < verkeersinformaties.size(); iii++) {
                     Verkeersinformatie verkeersinformatie = verkeersinformaties.get(iii);
-
                     System.out.println(verkeersinformatie.beschrijving());
                 }
-
-
             }
-
         }
-
-
     }
-
 }

@@ -3,36 +3,33 @@ package oose.a2b;
 import java.util.Date;
 
 public class Verkeersmelding {
+    private String beschrijving;
 
-	private String beschrijving;
+    private String gebruiker;
 
-	private String gebruiker;
+    private Date van;
 
-	private Date van;
+    private Date tot;
 
-	private Date tot;
+    private Verbindingsstuk locatie;
 
-	private Verbindingsstuk locatie;
+    private Verkeersinformatie verkeersinformatie;
 
-	private Verkeersinformatie verkeersinformatie;
+    private Verbindingsstuk verbindingsstuk;
 
-	private Verbindingsstuk verbindingsstuk;
+    private Systeem systeem;
 
-	private Systeem systeem;
+    public Verkeersmelding(String beschrijving, String gebruiker, Verbindingsstuk locatie) {
+        this.beschrijving = beschrijving;
+        this.gebruiker = gebruiker;
+        this.locatie = locatie;
+    }
 
-	public boolean verwijderen() {
-		return false;
-	}
+    public boolean verwijderen() {
+        return false;
+    }
 
-	public boolean wijzigen() {
-		return false;
-	}
-
-	/**
-	 *  
-	 */
-	public Verkeersmelding(String beschrijving, String gebruiker, Verbindingsstuk locatie) {
-
-	}
-
+    public boolean wijzigen() {
+        return false;
+    }
 }
