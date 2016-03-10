@@ -2,7 +2,6 @@ package oose.a2b;
 
 public class Flitspaal extends Verkeersinformatie {
     private float hectometerpaal;
-
     private Verkeersinformatie verkeersinformatie;
 
     public Flitspaal(float hectometerpaal, Verkeersinformatie verkeersinformatie) {

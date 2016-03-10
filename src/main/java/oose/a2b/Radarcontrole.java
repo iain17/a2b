@@ -2,7 +2,6 @@ package oose.a2b;
 
 public class Radarcontrole extends Verkeersinformatie {
     private float hectometerpaal;
-
     private Verkeersinformatie verkeersinformatie;
 
     public Radarcontrole(float hectometerpaal, Verkeersinformatie verkeersinformatie) {

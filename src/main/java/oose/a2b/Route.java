@@ -3,15 +3,12 @@ package oose.a2b;
 import java.util.ArrayList;
 
 public class Route {
-    private String beginpunt;
-
-    private String eindpunt;
-
+    private Locatie beginpunt;
+    private Locatie eindpunt;
     private Systeem systeem;
-
     private ArrayList<Verbindingsstuk> verbindingsstukken = new ArrayList<Verbindingsstuk>();
 
-    public Route(String beginpunt, String eindpunt, Systeem systeem, ArrayList<Verbindingsstuk> verbindingsstukken) {
+    public Route(Locatie beginpunt, Locatie eindpunt, Systeem systeem, ArrayList<Verbindingsstuk> verbindingsstukken) {
         this.beginpunt = beginpunt;
         this.eindpunt = eindpunt;
         this.systeem = systeem;
@@ -22,33 +19,36 @@ public class Route {
         return verbindingsstukken;
     }
 
-    public String getBeginpunt() {
+    public Locatie getBeginpunt() {
         return beginpunt;
     }
 
-    public void setBeginpunt(String beginpunt) {
+    public void setBeginpunt(Locatie beginpunt) {
         this.beginpunt = beginpunt;
     }
 
-    public String getEindpunt() {
+    public Locatie getEindpunt() {
         return eindpunt;
     }
 
-    public void setEindpunt(String eindpunt) {
+    public void setEindpunt(Locatie eindpunt) {
         this.eindpunt = eindpunt;
     }
 
     public float getKm() {
+        float totalKM = 0;
         for (Verbindingsstuk verbindingsstuk : verbindingsstukken) {
+            totalKM += verbindingsstuk.getKM();
         }
 
-        return 0;
+        return totalKM;
     }
 
     public float getReistijd() {
+        float totalGemiddeldeReisTijds = 0;
         for (Verbindingsstuk verbindingsstuk : verbindingsstukken) {
+            totalGemiddeldeReisTijds += verbindingsstuk.getGemiddeldeReistijd();
         }
-
-        return 0;
+        return totalGemiddeldeReisTijds;
     }
 }

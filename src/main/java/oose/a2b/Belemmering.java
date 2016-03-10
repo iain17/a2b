@@ -4,11 +4,8 @@ import java.util.Date;
 
 public class Belemmering extends Verkeersinformatie {
     private String beschrijving;
-
     private Date van;
-
     private Date tot;
-
     private Verkeersinformatie verkeersinformatie;
 
     public Belemmering(String beschrijving, Date van, Date tot, Verkeersinformatie verkeersinformatie) {

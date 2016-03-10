@@ -10,19 +10,18 @@ public class App {
         Systeem systeem = new Systeem();
         Automobilist automobilist = new Automobilist();
 
-        /*for (int i = 0; i < mogelijkeRoutes.size(); i++) {
-            Route route = mogelijkeRoutes.get(i);
-            ArrayList<Verbindingsstuk> verbindingsstukken = route.getVerbindingsstukken();
+        Route route = automobilist.getRoute();
+        ArrayList<Verbindingsstuk> verbindingsstukken = route.getVerbindingsstukken();
 
-            for (int ii = 0; ii < verbindingsstukken.size(); ii++) {
-                Verbindingsstuk verbindingsstuk = verbindingsstukken.get(ii);
-                ArrayList<Verkeersinformatie> verkeersinformaties = verbindingsstuk.getVerkeersinformatie();
+        for (int ii = 0; ii < verbindingsstukken.size(); ii++) {
+            Verbindingsstuk verbindingsstuk = verbindingsstukken.get(ii);
+            ArrayList<Verkeersinformatie> verkeersinformaties = verbindingsstuk.getVerkeersinformaties();
 
-                for (int iii = 0; iii < verkeersinformaties.size(); iii++) {
-                    Verkeersinformatie verkeersinformatie = verkeersinformaties.get(iii);
-                    System.out.println(verkeersinformatie.beschrijving());
-                }
+            for (int iii = 0; iii < verkeersinformaties.size(); iii++) {
+                Verkeersinformatie verkeersinformatie = verkeersinformaties.get(iii);
+                System.out.println(verkeersinformatie.beschrijving());
             }
-        }*/
+        }
+
     }
 }

@@ -1,5 +1,7 @@
 package oose.a2b;
 
+import com.sun.javafx.binding.StringFormatter;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -8,10 +10,15 @@ public class Automobilist {
     private String beginpunt;
     private String eindpunt;
     private Systeem systeem = new Systeem();
+    private Route route;
 
     public Automobilist() {
         getPunten();
-        Route route = kiesRoute();
+        route = kiesRoute();
+    }
+
+    public Route getRoute() {
+        return route;
     }
 
     private void getPunten() {
@@ -43,7 +50,11 @@ public class Automobilist {
             System.out.println("Mogelijke routes tussen " + beginpunt + " en " + eindpunt + ":");
 
             for (Route route : mogelijkeRoutes) {
-                System.out.println("Route " + String.valueOf(i) + " - KM: " + route.getKm() + " - Reistijd: " + route.getReistijd());
+                System.out.println("Route " + String.valueOf(i) + ": " + route.getKm() + " kilometers en " + route.getReistijd() + " minuten");
+                System.out.println("Gaat via:");
+                for (Verbindingsstuk verbindingsstuk : route.getVerbindingsstukken()) {
+                    System.out.println("\tVerbindingsstuk: " + verbindingsstuk.getTraject());
+                }
                 i++;
             }
         } else {

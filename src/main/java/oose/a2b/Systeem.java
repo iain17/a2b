@@ -3,33 +3,44 @@ package oose.a2b;
 import java.util.ArrayList;
 
 public class Systeem {
-    private ArrayList<Verkeersinformatie> verkeersinformatie = new ArrayList<Verkeersinformatie>();
-
     private ArrayList<Route> routes = new ArrayList<Route>();
-
     private ArrayList<Verkeersmelding> verkeersmelding = new ArrayList<Verkeersmelding>();
 
     public Systeem() {
-        verkeersmelding.add(new Verkeersmelding("File op de A13 tussen Den Haag en Rotterdam", "Robin", new Verbindingsstuk()));
-        verkeersmelding.add(new Verkeersmelding("File op de A4 tussen Amsterdam en Schiphol", "Iain", new Verbindingsstuk()));
+        ArrayList<Verbindingsstuk> route1 = new ArrayList<Verbindingsstuk>();
+        ArrayList<Verbindingsstuk> route2 = new ArrayList<Verbindingsstuk>();
 
-        ArrayList<Verbindingsstuk> verbindingsstukken = new ArrayList<Verbindingsstuk>();
-        verbindingsstukken.add(new Verbindingsstuk());
+        Locatie Waalbrug = new Locatie("Waalbrug");
+        Locatie Nijmegen = new Locatie("Nijmegen");
+        Locatie Arnhem = new Locatie("Arnhem");
+        Locatie Ressen = new Locatie("Ressen");
 
-        routes.add(new Route("Den Haag", "Rotterdam", this, verbindingsstukken));
+        Verbindingsstuk nijmegenRessen = new Verbindingsstuk(Nijmegen, Ressen, 15.0f, 10.7f);
+        Verbindingsstuk nijmegenWaalbrug = new Verbindingsstuk(Nijmegen, Waalbrug, 10, 13.7f);
+        Verbindingsstuk RessenArnhem = new Verbindingsstuk(Ressen, Arnhem, 20.0f, 15.7f);
+        Verbindingsstuk WaalbrugArnhem = new Verbindingsstuk(Waalbrug, Arnhem, 10.0f, 9.7f);
+        route1.add(nijmegenRessen);
+        route1.add(RessenArnhem);
 
-        verkeersinformatie.add(new File(5, 50, 55, null));
-        verkeersinformatie.add(new File(7, 43, 50, null));
-        verkeersinformatie.add(new File(15, 105, 125, null));
-        verkeersinformatie.add(new Flitspaal(7, null));
-        verkeersinformatie.add(new Radarcontrole(71, null));
+        route2.add(nijmegenWaalbrug);
+        route2.add(WaalbrugArnhem);
+
+        //Geregisteerde gebruiker heeft een melding gegeven.
+        verkeersmelding.add(new Verkeersmelding("File op de A13 tussen Nijmegen en Ressen", "Robin", nijmegenRessen));
+        verkeersmelding.add(new Verkeersmelding("File op de A4 tussen Ressen en Arnhem", "Iain", RessenArnhem));
+
+        //File die al bestaat
+        RessenArnhem.addVerkeersinformatie(new File(5, 6, 10));
+
+        routes.add(new Route(Nijmegen, Arnhem, this, route1));
+        routes.add(new Route(Nijmegen, Arnhem, this, route2));
     }
 
     public ArrayList<Route> getRoutes(String beginpunt, String eindpunt) {
         ArrayList<Route> mogelijkeRoutes = new ArrayList<Route>();
 
         for (Route route : routes) {
-            if (route.getBeginpunt().equalsIgnoreCase(beginpunt) && route.getEindpunt().equalsIgnoreCase(eindpunt)) {
+            if (route.getBeginpunt().getNaam().equalsIgnoreCase(beginpunt) && route.getEindpunt().getNaam().equalsIgnoreCase(eindpunt)) {
                 mogelijkeRoutes.add(route);
             }
         }
