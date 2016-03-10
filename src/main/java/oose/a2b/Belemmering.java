@@ -4,15 +4,13 @@ import java.util.Date;
 
 public class Belemmering extends Verkeersinformatie {
     private String beschrijving;
-    private Date van;
-    private Date tot;
-    private Verkeersinformatie verkeersinformatie;
+    private String van;
+    private String tot;
 
-    public Belemmering(String beschrijving, Date van, Date tot, Verkeersinformatie verkeersinformatie) {
+    public Belemmering(String beschrijving, String van, String tot) {
         this.beschrijving = beschrijving;
         this.van = van;
         this.tot = tot;
-        this.verkeersinformatie = verkeersinformatie;
     }
 
     public boolean wijzigen(String beschrijving, Date van, Date tot) {
@@ -21,7 +19,7 @@ public class Belemmering extends Verkeersinformatie {
 
     @Override
     public String beschrijving() {
-        return null;
+        return String.format("%s van %s tot %s.",beschrijving, van, tot);
     }
 
     @Override

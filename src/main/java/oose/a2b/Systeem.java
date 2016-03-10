@@ -31,6 +31,7 @@ public class Systeem {
 
         //File die al bestaat
         RessenArnhem.addVerkeersinformatie(new File(5, 6, 10));
+        RessenArnhem.addVerkeersinformatie(new Belemmering("Weg afgesloten", "2016-03-11", "2016-04-11"));
 
         routes.add(new Route(Nijmegen, Arnhem, this, route1));
         routes.add(new Route(Nijmegen, Arnhem, this, route2));
@@ -67,6 +68,4 @@ public class Systeem {
     public ArrayList verkeersmeldingBekijken() {
         return null;
     }
-
-
 }

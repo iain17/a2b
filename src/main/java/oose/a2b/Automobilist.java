@@ -1,7 +1,5 @@
 package oose.a2b;
 
-import com.sun.javafx.binding.StringFormatter;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;

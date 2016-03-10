@@ -1,8 +1,6 @@
 package oose.a2b;
 
 import java.util.ArrayList;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
 public class App {
     public static void main(String[] args) {
