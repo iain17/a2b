@@ -61,19 +61,7 @@ public class Systeem {
         return true;
     }
 
-    public ArrayList verkeersinformatieBekijken(Verbindingsstuk verbindingsstuk) {
-        return null;
-    }
-
-    public boolean verkeersinformatieToevoegen(Verkeersinformatie verkeersinformatie) {
-        return false;
-    }
-
-    public boolean verkeersmeldingAccepteren(Verkeersmelding verkeersmelding) {
-        return false;
-    }
-
-    public ArrayList verkeersmeldingBekijken() {
-        return null;
+    public ArrayList<Verbindingsstuk> getVerbindingsstukken() {
+        return Verbindingsstukken;
     }
 }

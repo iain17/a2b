@@ -78,4 +78,8 @@ public class Automobilist {
         System.out.println("Je hebt gekozen voor route " + String.valueOf(routenummer) + "!");
         return mogelijkeRoutes.get(routenummer);
     }
+
+    public void meld(String beschrijving) {
+        systeem.melden(beschrijving, systeem.getVerbindingsstukken().get(0));
+    }
 }

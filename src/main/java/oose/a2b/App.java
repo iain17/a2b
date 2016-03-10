@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) {
+
         //Use case: Ophalen verkeersinformatie
         Automobilist automobilist = new Automobilist();
 
@@ -19,6 +20,10 @@ public class App {
                 System.out.println(verkeersinformatie.beschrijving());
             }
         }
+
+
+        //Use case: Geregisteerde automobilist meld nieuwe verkeersinformatie.
+        automobilist.meld("File op de A13 tussen Nijmegen en Ressen");
 
     }
 }
