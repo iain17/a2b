@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8de4203a-3790-4b29-a5af-8f7ee21b4b4c" name="Default" comment="New export from astah with some fundamental changes.&#10;Started writing the first use case.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/oose/a2b/App.class" afterPath="$PROJECT_DIR$/target/classes/oose/a2b/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/oose/a2b/Belemmering.class" afterPath="$PROJECT_DIR$/target/classes/oose/a2b/Belemmering.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/oose/a2b/File.class" afterPath="$PROJECT_DIR$/target/classes/oose/a2b/File.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/oose/a2b/Flitspaal.class" afterPath="$PROJECT_DIR$/target/classes/oose/a2b/Flitspaal.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/oose/a2b/Radarcontrole.class" afterPath="$PROJECT_DIR$/target/classes/oose/a2b/Radarcontrole.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/oose/a2b/Route.class" afterPath="$PROJECT_DIR$/target/classes/oose/a2b/Route.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/oose/a2b/Systeem.class" afterPath="$PROJECT_DIR$/target/classes/oose/a2b/Systeem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/oose/a2b/Verbindingsstuk.class" afterPath="$PROJECT_DIR$/target/classes/oose/a2b/Verbindingsstuk.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/oose/a2b/Verkeersinformatie.class" afterPath="$PROJECT_DIR$/target/classes/oose/a2b/Verkeersinformatie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/oose/a2b/Verkeersmelding.class" afterPath="$PROJECT_DIR$/target/classes/oose/a2b/Verkeersmelding.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="a2b.iws" />
@@ -37,7 +26,18 @@
     <favorites_list name="a2b" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -72,6 +72,7 @@
         <option value="$PROJECT_DIR$/src/main/java/oose/a2b/File.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/a2b/Route.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/a2b/Systeem.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -136,6 +137,46 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="a2b" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a2b" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a2b" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a2b" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a2b" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a2b" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oose" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="a2b" />
@@ -671,7 +712,7 @@
       <workItem from="1457474769365" duration="1952000" />
       <workItem from="1457548065554" duration="1087000" />
       <workItem from="1457550728571" duration="5037000" />
-      <workItem from="1457596668229" duration="10663000" />
+      <workItem from="1457596668229" duration="10722000" />
     </task>
     <task id="LOCAL-00001" summary="remove old export">
       <created>1457474831180</created>
@@ -703,15 +744,21 @@
       <option name="project" value="LOCAL" />
       <updated>1457608928559</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="New export from astah with some fundamental changes.&#10;Started writing the first use case.">
+      <created>1457608945784</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1457608945784</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18876000" />
+    <option name="totallyTimeSpent" value="18935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -724,7 +771,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32800853" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32848233" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1682641" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1682641" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -753,11 +800,11 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="remove old export" />
     <MESSAGE value="New export. Some problems were found with the old export" />
-    <MESSAGE value="New export from astah with some fundamental changes.&#10;Started writing the first use case." />
     <MESSAGE value="Database filled and made some methods" />
     <MESSAGE value="Automobilist added" />
     <MESSAGE value="continued on an astah export" />
-    <option name="LAST_COMMIT_MESSAGE" value="continued on an astah export" />
+    <MESSAGE value="New export from astah with some fundamental changes.&#10;Started writing the first use case." />
+    <option name="LAST_COMMIT_MESSAGE" value="New export from astah with some fundamental changes.&#10;Started writing the first use case." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1029,6 +1076,14 @@
             <element signature="e#163#164#0" expanded="true" />
             <element signature="e#190#191#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
