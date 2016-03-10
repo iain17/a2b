@@ -1,34 +1,54 @@
 package oose.a2b;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Route {
-    private int routenummer;
-
     private String beginpunt;
 
     private String eindpunt;
 
-    private float km;
-
-    private float reistijd;
-
     private Systeem systeem;
 
-    private List<Verbindingsstuk> verbindingsstuk = new ArrayList<Verbindingsstuk>();
+    private ArrayList<Verbindingsstuk> verbindingsstukken = new ArrayList<Verbindingsstuk>();
 
-    //manually added, missing in Astah
-    public Route(int routenummer, String beginpunt, String eindpunt, float km, float reistijd, Systeem systeem, List<Verbindingsstuk> verbindingsstukken) {
-        this.routenummer = routenummer;
+    public Route(String beginpunt, String eindpunt, Systeem systeem, ArrayList<Verbindingsstuk> verbindingsstukken) {
         this.beginpunt = beginpunt;
         this.eindpunt = eindpunt;
-        this.km = km;
         this.systeem = systeem;
-        this.verbindingsstuk = verbindingsstukken;
+        this.verbindingsstukken = verbindingsstukken;
     }
 
-    public List<Verbindingsstuk> getVerbindingsstukken() {
-        return verbindingsstuk;
+    public ArrayList<Verbindingsstuk> getVerbindingsstukken() {
+        return verbindingsstukken;
+    }
+
+    public String getBeginpunt() {
+        return beginpunt;
+    }
+
+    public void setBeginpunt(String beginpunt) {
+        this.beginpunt = beginpunt;
+    }
+
+    public String getEindpunt() {
+        return eindpunt;
+    }
+
+    public void setEindpunt(String eindpunt) {
+        this.eindpunt = eindpunt;
+    }
+
+    public float getKm() {
+        for (Verbindingsstuk verbindingsstuk : verbindingsstukken) {
+        }
+
+        return 0;
+    }
+
+    public float getReistijd() {
+        for (Verbindingsstuk verbindingsstuk : verbindingsstukken) {
+        }
+
+        return 0;
     }
 }

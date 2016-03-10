@@ -6,13 +6,13 @@ import java.util.List;
 public class Verbindingsstuk {
     private String naam;
 
-    private List<Verkeersinformatie> verkeersinformatie = new ArrayList<Verkeersinformatie>();
+    private float gemiddeldeReistijd;
 
-    private List<Route> route = new ArrayList<Route>();
+    private ArrayList<Verkeersinformatie> verkeersinformatie = new ArrayList<Verkeersinformatie>();
 
-    private List<Verkeersmelding> verkeersmelding = new ArrayList<Verkeersmelding>();
+    private ArrayList<Verkeersmelding> verkeersmelding = new ArrayList<Verkeersmelding>();
 
-    public List<Verkeersinformatie> getVerkeersinformatie() {
+    public ArrayList<Verkeersinformatie> getVerkeersinformatie() {
         return verkeersinformatie;
     }
 }

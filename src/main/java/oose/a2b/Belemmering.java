@@ -11,7 +11,6 @@ public class Belemmering extends Verkeersinformatie {
 
     private Verkeersinformatie verkeersinformatie;
 
-    //manually added, missing in Astah
     public Belemmering(String beschrijving, Date van, Date tot, Verkeersinformatie verkeersinformatie) {
         this.beschrijving = beschrijving;
         this.van = van;

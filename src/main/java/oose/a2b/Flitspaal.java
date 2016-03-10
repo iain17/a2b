@@ -5,7 +5,6 @@ public class Flitspaal extends Verkeersinformatie {
 
     private Verkeersinformatie verkeersinformatie;
 
-    //manually added, missing in Astah
     public Flitspaal(float hectometerpaal, Verkeersinformatie verkeersinformatie) {
         this.hectometerpaal = hectometerpaal;
         this.verkeersinformatie = verkeersinformatie;

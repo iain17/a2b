@@ -9,7 +9,6 @@ public class File extends Verkeersinformatie {
 
     private Verkeersinformatie verkeersinformatie;
 
-    //manually added, missing in Astah
     public File(float lengteKM, float beginpuntKM, float eindpuntKM, Verkeersinformatie verkeersinformatie) {
         this.lengteKM = lengteKM;
         this.beginpuntKM = beginpuntKM;

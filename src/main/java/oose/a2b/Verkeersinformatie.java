@@ -14,7 +14,7 @@ public abstract class Verkeersinformatie extends Verbindingsstuk {
 
     private Radarcontrole radarcontrole;
 
-    private List<Verbindingsstuk> verbindingsstuk = new ArrayList<Verbindingsstuk>();
+    private ArrayList<Verbindingsstuk> verbindingsstuk = new ArrayList<Verbindingsstuk>();
 
     private Verkeersmelding verkeersmelding;
 
