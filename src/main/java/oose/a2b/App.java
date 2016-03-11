@@ -8,6 +8,10 @@ public class App {
         //Use case: Ophalen verkeersinformatie
         Automobilist automobilist = new Automobilist();
 
+<<<<<<< HEAD
+        //Use case: Geregisteerde automobilist meld nieuwe verkeersinformatie.
+        automobilist.meld("File op de A13 tussen Nijmegen en Ressen");
+=======
         Route route = automobilist.getRoute();
         ArrayList<Verbindingsstuk> verbindingsstukken = route.getVerbindingsstukken();
 
@@ -20,6 +24,7 @@ public class App {
                 System.out.println(verkeersinformatie.beschrijving());
             }
         }
+>>>>>>> 8bfaa5c0b3505474642ceff41bb53863513b15fc
 
     }
 }
