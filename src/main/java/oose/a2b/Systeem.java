@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Systeem {
     private ArrayList<Route> routes = new ArrayList<Route>();
     private ArrayList<Verbindingsstuk> Verbindingsstukken = new ArrayList<Verbindingsstuk>();
+    private ArrayList<Route> mogelijkeRoutes = new ArrayList<Route>();
     private Automobilist automobilist;
 
     public Systeem(Automobilist automobilist) {
@@ -44,8 +45,8 @@ public class Systeem {
         routes.add(new Route(Nijmegen, Arnhem, this, route2));
     }
 
-    public ArrayList<Route> getRoutes(String beginpunt, String eindpunt) {
-        ArrayList<Route> mogelijkeRoutes = new ArrayList<Route>();
+    public String getRoutes(String beginpunt, String eindpunt) {
+        String output = "";
 
         for (Route route : routes) {
             if (route.getBeginpunt().getNaam().equalsIgnoreCase(beginpunt) && route.getEindpunt().getNaam().equalsIgnoreCase(eindpunt)) {
@@ -53,8 +54,54 @@ public class Systeem {
             }
         }
 
-        return mogelijkeRoutes;
+        if (mogelijkeRoutes.size() > 0) {
+            int i = 0;
+
+            output += "Mogelijke routes tussen " + beginpunt + " en " + eindpunt + ":\n";
+
+            for (Route route : mogelijkeRoutes) {
+                output += "Route " + String.valueOf(i) + ": " + route.getKm() + " kilometers en " + route.getReistijd() + " minuten\n";
+                output += "Gaat via:\n";
+                for (Verbindingsstuk verbindingsstuk : route.getVerbindingsstukken()) {
+                    output += "\tVerbindingsstuk: " + verbindingsstuk.getTraject() + "\n";
+                }
+                i++;
+            }
+        } else {
+            output += "Geen routes beschikbaar.\n";
+            return null;
+        }
+
+        return output;
     }
+
+    public String kiesRoute(int routeNr) {
+        String output = "";
+
+        if (routeNr < 0 || routeNr >= mogelijkeRoutes.size()) {
+            output += "Ongeldig routenummer!\n";
+            System.exit(-1);
+        }
+
+        output += "Je hebt gekozen voor route " + String.valueOf(routeNr) + "!\n";
+
+        Route route = mogelijkeRoutes.get(routeNr);
+        ArrayList<Verbindingsstuk> verbindingsstukken = route.getVerbindingsstukken();
+
+        for (int ii = 0; ii < verbindingsstukken.size(); ii++) {
+            Verbindingsstuk verbindingsstuk = verbindingsstukken.get(ii);
+            ArrayList<Verkeersinformatie> verkeersinformaties = verbindingsstuk.getVerkeersinformaties();
+
+            for (int iii = 0; iii < verkeersinformaties.size(); iii++) {
+                Verkeersinformatie verkeersinformatie = verkeersinformaties.get(iii);
+                output += verkeersinformatie.beschrijving() + "\n";
+            }
+        }
+
+        return output;
+    }
+
+
 
     public boolean melden(String beschrijving, Verbindingsstuk verbindingsstuk) {
         Verkeersmelding verkeersmelding = new Verkeersmelding(beschrijving, this.automobilist, verbindingsstuk);

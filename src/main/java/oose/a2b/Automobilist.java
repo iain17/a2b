@@ -8,15 +8,15 @@ public class Automobilist {
     private String beginpunt;
     private String eindpunt;
     private Systeem systeem = new Systeem(this);
-    private Route route;
+    private int routeNummer;
 
     public Automobilist() {
         getPunten();
-        route = kiesRoute();
+        routeNummer = kiesRoute();
     }
 
-    public Route getRoute() {
-        return route;
+    public int getRoute() {
+        return routeNummer;
     }
 
     private void getPunten() {
@@ -33,35 +33,20 @@ public class Automobilist {
         }
     }
 
-    private Route kiesRoute() {
+    private int kiesRoute() {
         if (beginpunt == null || eindpunt == null) {
             System.err.println("Geen routes beschikbaar.");
-            return null;
+            return 0;
         }
 
-        ArrayList<Route> mogelijkeRoutes = systeem.getRoutes(beginpunt, eindpunt);
+        String mogelijkeRoutes = systeem.getRoutes(beginpunt, eindpunt);
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        if (mogelijkeRoutes.size() > 0) {
-            int i = 0;
+        System.out.println(mogelijkeRoutes);
 
-            System.out.println("Mogelijke routes tussen " + beginpunt + " en " + eindpunt + ":");
-
-            for (Route route : mogelijkeRoutes) {
-                System.out.println("Route " + String.valueOf(i) + ": " + route.getKm() + " kilometers en " + route.getReistijd() + " minuten");
-                System.out.println("Gaat via:");
-                for (Verbindingsstuk verbindingsstuk : route.getVerbindingsstukken()) {
-                    System.out.println("\tVerbindingsstuk: " + verbindingsstuk.getTraject());
-                }
-                i++;
-            }
-        } else {
-            System.err.println("Geen routes beschikbaar.");
-            return null;
-        }
 
         int routenummer = -1;
-        System.out.print("Voer een routenummer in in: ");
+        System.out.print("Voer een routenummer in: ");
 
         try {
             routenummer = Integer.parseInt(br.readLine());
@@ -70,13 +55,8 @@ public class Automobilist {
             System.exit(-1);
         }
 
-        if (routenummer < 0 || routenummer >= mogelijkeRoutes.size()) {
-            System.err.println("Ongeldig routenummer!");
-            System.exit(-1);
-        }
-
-        System.out.println("Je hebt gekozen voor route " + String.valueOf(routenummer) + "!");
-        return mogelijkeRoutes.get(routenummer);
+        System.out.println(systeem.kiesRoute(routenummer));
+        return routenummer;
     }
 
     public void meld(String beschrijving) {
