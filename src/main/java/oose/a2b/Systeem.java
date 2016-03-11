@@ -88,12 +88,12 @@ public class Systeem {
         Route route = mogelijkeRoutes.get(routeNr);
         ArrayList<Verbindingsstuk> verbindingsstukken = route.getVerbindingsstukken();
 
-        for (int i = 0; i < verbindingsstukken.size(); i++) {
-            Verbindingsstuk verbindingsstuk = verbindingsstukken.get(i);
+        for (int ii = 0; ii < verbindingsstukken.size(); ii++) {
+            Verbindingsstuk verbindingsstuk = verbindingsstukken.get(ii);
             ArrayList<Verkeersinformatie> verkeersinformaties = verbindingsstuk.getVerkeersinformaties();
 
-            for (int j = 0; j < verkeersinformaties.size(); j++) {
-                Verkeersinformatie verkeersinformatie = verkeersinformaties.get(j);
+            for (int iii = 0; iii < verkeersinformaties.size(); iii++) {
+                Verkeersinformatie verkeersinformatie = verkeersinformaties.get(iii);
                 output += verkeersinformatie.beschrijving() + "\n";
             }
         }

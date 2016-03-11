@@ -36,19 +36,22 @@ public class Route {
     }
 
     public float getKm() {
-        float totalKM = 0;
+        float totaleAfstand = 0;
+
         for (Verbindingsstuk verbindingsstuk : verbindingsstukken) {
-            totalKM += verbindingsstuk.getKM();
+            totaleAfstand += verbindingsstuk.getKM();
         }
 
-        return totalKM;
+        return totaleAfstand;
     }
 
     public float getReistijd() {
-        float totalGemiddeldeReisTijds = 0;
+        float totaleGemiddeldeReistijd = 0;
+
         for (Verbindingsstuk verbindingsstuk : verbindingsstukken) {
-            totalGemiddeldeReisTijds += verbindingsstuk.getGemiddeldeReistijd();
+            totaleGemiddeldeReistijd += verbindingsstuk.getGemiddeldeReistijd();
         }
-        return totalGemiddeldeReisTijds;
+
+        return totaleGemiddeldeReistijd;
     }
 }

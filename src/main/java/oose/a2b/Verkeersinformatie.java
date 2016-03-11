@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Verkeersinformatie {
-
-
     protected Verbindingsstuk verbindingsstuk;
 
     public Verkeersinformatie(Verbindingsstuk verbindingsstuk) {

@@ -15,6 +15,6 @@ public class Radarcontrole extends Verkeersinformatie {
 
     @Override
     public String beschrijving() {
-        return String.format("Een radarcontrole bij hectometerpaal: %.1f", hectometerpaal);
+        return String.format("Een radarcontrole bij hectometerpaal %.1f.", hectometerpaal);
     }
 }
