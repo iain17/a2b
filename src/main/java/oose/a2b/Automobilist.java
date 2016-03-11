@@ -40,10 +40,14 @@ public class Automobilist {
         }
 
         String mogelijkeRoutes = systeem.getRoutes(beginpunt, eindpunt);
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        if (mogelijkeRoutes == null) {
+            System.err.println("Geen routes beschikbaar.");
+            return 0;
+        }
 
         System.out.println(mogelijkeRoutes);
-
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int routenummer = -1;
         System.out.print("Voer een routenummer in: ");

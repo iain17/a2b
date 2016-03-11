@@ -15,7 +15,7 @@ public class Flitspaal extends Verkeersinformatie {
 
     @Override
     public String beschrijving() {
-        return String.format("Een flitspaal bij hectometerpaal: %.1f", hectometerpaal);
+        return String.format("Een flitspaal bij hectometerpaal %.1f.", hectometerpaal);
     }
 
 }

@@ -1,7 +1,5 @@
 package oose.a2b;
 
-import java.util.Date;
-
 public class Belemmering extends Verkeersinformatie {
     private String beschrijving;
     private String van;
@@ -23,6 +21,6 @@ public class Belemmering extends Verkeersinformatie {
 
     @Override
     public String beschrijving() {
-        return String.format("%s van %s tot %s.",beschrijving, van, tot);
+        return String.format("%s van %s tot %s.", beschrijving, van, tot);
     }
 }

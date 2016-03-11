@@ -21,7 +21,7 @@ public class File extends Verkeersinformatie {
 
     @Override
     public String beschrijving() {
-        return String.format("Een file bij hectometerpaal: %.1f tot %.1f. Van %.1f kilometer", hectometerpaalBegin, hectometerpaalEind, getAfstand());
+        return String.format("Een file tussen hectometerpaal %.1f en hectometerpaal %.1f met als totale afstand %.1f kilometer.", hectometerpaalBegin, hectometerpaalEind, getAfstand());
     }
 
     @Override

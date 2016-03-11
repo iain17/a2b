@@ -1,8 +1,6 @@
 package oose.a2b;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Verbindingsstuk {
     private float gemiddeldeReistijd;
@@ -18,7 +16,6 @@ public class Verbindingsstuk {
         this.gemiddeldeReistijd = gemiddeldeReistijd;
         this.km = km;
     }
-
 
     public ArrayList<Verkeersinformatie> getVerkeersinformaties() {
         return verkeersinformaties;

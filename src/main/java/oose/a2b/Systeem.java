@@ -46,8 +46,6 @@ public class Systeem {
     }
 
     public String getRoutes(String beginpunt, String eindpunt) {
-        String output = "";
-
         for (Route route : routes) {
             if (route.getBeginpunt().getNaam().equalsIgnoreCase(beginpunt) && route.getEindpunt().getNaam().equalsIgnoreCase(eindpunt)) {
                 mogelijkeRoutes.add(route);
@@ -57,33 +55,31 @@ public class Systeem {
         if (mogelijkeRoutes.size() > 0) {
             int i = 0;
 
-            output += "Mogelijke routes tussen " + beginpunt + " en " + eindpunt + ":\n";
+            String output = "\nMogelijke routes tussen " + beginpunt + " en " + eindpunt + ":\n";
 
             for (Route route : mogelijkeRoutes) {
                 output += "Route " + String.valueOf(i) + ": " + route.getKm() + " kilometers en " + route.getReistijd() + " minuten\n";
                 output += "Gaat via:\n";
+
                 for (Verbindingsstuk verbindingsstuk : route.getVerbindingsstukken()) {
                     output += "\tVerbindingsstuk: " + verbindingsstuk.getTraject() + "\n";
                 }
+
                 i++;
             }
-        } else {
-            output += "Geen routes beschikbaar.\n";
-            return null;
+
+            return output;
         }
 
-        return output;
+        return null;
     }
 
     public String kiesRoute(int routeNr) {
-        String output = "";
-
         if (routeNr < 0 || routeNr >= mogelijkeRoutes.size()) {
-            output += "Ongeldig routenummer!\n";
-            System.exit(-1);
+            return "Ongeldig routenummer!";
         }
 
-        output += "Je hebt gekozen voor route " + String.valueOf(routeNr) + "!\n";
+        String output = "";
 
         Route route = mogelijkeRoutes.get(routeNr);
         ArrayList<Verbindingsstuk> verbindingsstukken = route.getVerbindingsstukken();
@@ -94,14 +90,12 @@ public class Systeem {
 
             for (int iii = 0; iii < verkeersinformaties.size(); iii++) {
                 Verkeersinformatie verkeersinformatie = verkeersinformaties.get(iii);
-                output += verkeersinformatie.beschrijving() + "\n";
+                output += "\n" + verkeersinformatie.beschrijving();
             }
         }
 
         return output;
     }
-
-
 
     public boolean melden(String beschrijving, Verbindingsstuk verbindingsstuk) {
         Verkeersmelding verkeersmelding = new Verkeersmelding(beschrijving, this.automobilist, verbindingsstuk);
