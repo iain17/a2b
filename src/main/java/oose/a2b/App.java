@@ -21,9 +21,5 @@ public class App {
             }
         }
 
-
-        //Use case: Geregisteerde automobilist meld nieuwe verkeersinformatie.
-        automobilist.meld("File op de A13 tussen Nijmegen en Ressen");
-
     }
 }

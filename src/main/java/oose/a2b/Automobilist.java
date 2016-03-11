@@ -80,6 +80,7 @@ public class Automobilist {
     }
 
     public void meld(String beschrijving) {
-        systeem.melden(beschrijving, systeem.getVerbindingsstukken().get(0));
+        ArrayList<Verbindingsstuk> verbindingsstukken = systeem.getVerbindingsstukken();
+        systeem.melden(beschrijving, verbindingsstukken.get(0));
     }
 }
