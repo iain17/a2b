@@ -13,6 +13,7 @@ public class Automobilist {
     public Automobilist() {
         getPunten();
         routeNummer = kiesRoute();
+        meld();
     }
 
     public int getRoute() {
@@ -63,8 +64,43 @@ public class Automobilist {
         return routenummer;
     }
 
-    public void meld(String beschrijving) {
-        ArrayList<Verbindingsstuk> verbindingsstukken = systeem.getVerbindingsstukken();
-        systeem.melden(beschrijving, verbindingsstukken.get(0));
+    public void meld() {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String input = "";
+        try {
+            System.out.print("Wilt u een melding doorgeven? (y/n): ");
+            input = br.readLine();
+
+        } catch (Exception e) {
+            System.err.println("Ongeldige invoer!");
+        }
+        System.out.println(input+"\n");
+        if (!input.equalsIgnoreCase("y")) {
+            return;
+        }
+
+        System.out.println(systeem.getVerbindingsstuk(routeNummer));
+
+        int verbindingsstukNummer = -1;
+        System.out.print("Voer een verbindingsstuknummer in: ");
+
+        try {
+            verbindingsstukNummer = Integer.parseInt(br.readLine());
+        } catch (Exception e) {
+            System.err.println("Ongeldig verbindingsstuknummer!");
+            System.exit(-1);
+        }
+
+        String beschrijving = "";
+        try {
+            System.out.print("Voer uw melding in: ");
+            beschrijving = br.readLine();
+
+        } catch (Exception e) {
+            System.err.println("Ongeldige invoer!");
+        }
+
+        systeem.melden(verbindingsstukNummer, beschrijving);
     }
 }
