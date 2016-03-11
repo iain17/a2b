@@ -102,7 +102,7 @@ public class Systeem {
         return output;
     }
 
-    public String getVerbindingsstuk (int routeNr) {
+    public String getVerbindingsstukken(int routeNr) {
         String output = "Mogelijke verbindingsstukken om een melding over te plaatsen:\n";
 
         Route route = mogelijkeRoutes.get(routeNr);

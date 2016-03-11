@@ -2,7 +2,6 @@ package oose.a2b;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 public class Automobilist {
     private String beginpunt;
@@ -80,7 +79,7 @@ public class Automobilist {
             return;
         }
 
-        System.out.println(systeem.getVerbindingsstuk(routeNummer));
+        System.out.println(systeem.getVerbindingsstukken(routeNummer));
 
         int verbindingsstukNummer = -1;
         System.out.print("Voer een verbindingsstuknummer in: ");
